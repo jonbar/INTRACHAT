@@ -1,8 +1,5 @@
-package es.eroski.intrachat.modelo.conector;
+package es.eroski.intrachat.model.conector;
 
-/**
- * @author leei8 25 mar. 2017
- */
 public interface Config {
 
 	public static final String BBDD = "intrachat";

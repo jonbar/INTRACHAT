@@ -1,4 +1,4 @@
-package es.eroski.intrachat.clases;
+package es.eroski.intrachat.classes;
 
 import java.util.Date;
 

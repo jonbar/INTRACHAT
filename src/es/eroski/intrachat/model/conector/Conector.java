@@ -1,16 +1,9 @@
-/**
- * 
- */
-package es.eroski.intrachat.modelo.conector;
+package es.eroski.intrachat.model.conector;
 
 import java.sql.DriverManager;
-
 import java.sql.Connection;
 import java.sql.SQLException;
 
-/**
- * @author iklaurik95 25 mar. 2017
- */
 public class Conector {
 	protected Connection conexion;
 
