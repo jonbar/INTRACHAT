@@ -10,7 +10,7 @@ public class User {
 	private String email;
 	private int id_department;
 	private ArrayList<User> contacts;
-	private ArrayList messages;
+	private ArrayList<Message> messages;
 
 	public User() {
 		super();
@@ -64,11 +64,11 @@ public class User {
 		this.contacts = contacts;
 	}
 
-	public ArrayList getMessages() {
+	public ArrayList<Message> getMessages() {
 		return messages;
 	}
 
-	public void setMessages(ArrayList messages) {
+	public void setMessages(ArrayList<Message> messages) {
 		this.messages = messages;
 	}
 
