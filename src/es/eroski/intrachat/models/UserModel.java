@@ -35,12 +35,13 @@ public class UserModel extends Conector {
 	}
 
 	public User selectUserLogin(String userlogin, String password) {
+		User user = null;
 		try {
 			Statement st = this.conexion.createStatement();
 			ResultSet rs = st.executeQuery("select * from users where id_user='" + Integer.parseInt(userlogin) + 
 										   "' or email='" + userlogin + "' and password='" + password + "'");
 			rs.next();
-			User user = new User();
+			user = new User();
 			user.setId_user(rs.getInt("id_user"));
 			user.setPassword(rs.getString("password"));
 			user.setName(rs.getString("name"));
@@ -53,7 +54,7 @@ public class UserModel extends Conector {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		return null;
+		return user;
 	}
 
 }
