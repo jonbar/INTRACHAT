@@ -10,13 +10,6 @@ import es.eroski.intrachat.models.conector.Conector;
 
 public class UserModel extends Conector {
 
-	UserModel() {
-		super();
-
-	}
-	
-	//A ver si funciona
-
 	public ArrayList<User> selectAllUsers() {
 		ArrayList<User> users = new ArrayList<User>();
 		try {
@@ -41,11 +34,11 @@ public class UserModel extends Conector {
 		return null;
 	}
 
-	public User selectUserLogin(int id_user, String email, String password) {
+	public User selectUserLogin(String userlogin, String password) {
 		try {
 			Statement st = this.conexion.createStatement();
-			ResultSet rs = st.executeQuery("select * from users where id_user='" + id_user + 
-										   "' or email='" + email + "' and password='" + password + "'");
+			ResultSet rs = st.executeQuery("select * from users where id_user='" + Integer.parseInt(userlogin) + 
+										   "' or email='" + userlogin + "' and password='" + password + "'");
 			rs.next();
 			User user = new User();
 			user.setId_user(rs.getInt("id_user"));
