@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class User {
 
 	private int id_user;
+	private String password;
 	private String name;
 	private String last_name;
 	private String email;
@@ -22,6 +23,14 @@ public class User {
 
 	public void setId_user(int id_user) {
 		this.id_user = id_user;
+	}
+
+	public String getPassword() {
+		return name;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
 	}
 
 	public String getName() {
