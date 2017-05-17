@@ -1,4 +1,4 @@
-package es.eroski.intrachat.model.conector;
+package es.eroski.intrachat.models.conector;
 
 import java.sql.DriverManager;
 import java.sql.Connection;

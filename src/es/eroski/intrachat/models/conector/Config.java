@@ -1,4 +1,4 @@
-package es.eroski.intrachat.model.conector;
+package es.eroski.intrachat.models.conector;
 
 public interface Config {
 
