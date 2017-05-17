@@ -14,6 +14,8 @@ public class UserModel extends Conector {
 		super();
 
 	}
+	
+	//A ver si funciona
 
 	public ArrayList<User> selectAllUsers() {
 		ArrayList<User> users = new ArrayList<User>();
