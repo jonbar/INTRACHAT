@@ -56,5 +56,19 @@ public class UserModel extends Conector {
 		}
 		return user;
 	}
+	
+	public void insertUser(User user) {
+		Statement st;
+		try {
+			st = super.getConexion().createStatement();
+			st.execute("INSERT INTO users (password,name,last_name,email,id_department) " + "VALUES ('"
+					+ user.getPassword() + "','" + user.getName() + "','" + user.getLast_name() + "','"
+					+ user.getEmail() + "','" + user.getId_department() + "')");
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
 
 }
