@@ -12,7 +12,8 @@
 </head>
 <body>
 	<form action="login.jsp" method="post">
-		<table>
+		<h1 align="center">LOGIN</h1>
+		<table align="center">
 			<tr>
 				<td>
 					Usuario:

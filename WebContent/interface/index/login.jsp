@@ -11,6 +11,7 @@
 	<%@ page import="es.eroski.intrachat.classes.*" %>
 	<%@ page import="java.util.*" %>
 	<%
+		//TODO
 		UserModel userModel = new UserModel();
 	
 		String received_user = request.getParameter("user");
