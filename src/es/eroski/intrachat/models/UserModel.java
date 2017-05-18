@@ -35,11 +35,13 @@ public class UserModel extends Conector {
 	}
 
 	public User selectUserLogin(String userlogin, String password) {
+		int id_user = Integer.parseInt(userlogin);
+		String email = userlogin;
 		User user = null;
 		try {
 			Statement st = this.conexion.createStatement();
-			ResultSet rs = st.executeQuery("select * from users where id_user='" + Integer.parseInt(userlogin) + 
-										   "' or email='" + userlogin + "' and password='" + password + "'");
+			ResultSet rs = st.executeQuery("select * from users where id_user='" + id_user + 
+										   "' or email='" + email + "' and password='" + password + "'");
 			rs.next();
 			user = new User();
 			user.setId_user(rs.getInt("id_user"));

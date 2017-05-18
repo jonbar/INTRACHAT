@@ -16,6 +16,7 @@
 		String received_user = request.getParameter("user");
 		String received_password = request.getParameter("password");
 		
+		//ERROR
 		User user = userModel.selectUserLogin(received_user, received_password);
 
 		if (user.getName() != null) {
