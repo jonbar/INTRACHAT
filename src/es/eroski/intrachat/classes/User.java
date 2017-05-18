@@ -9,7 +9,8 @@ public class User {
 	private String name;
 	private String last_name;
 	private String email;
-	private int id_department;
+	private String workstation;
+	private Department department;
 	private ArrayList<User> contacts;
 	private ArrayList<Message> messages;
 
@@ -56,13 +57,22 @@ public class User {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-
-	public int getId_department() {
-		return id_department;
+	
+	public String getWorkstation() {
+		return workstation;
 	}
 
-	public void setId_department(int id_department) {
-		this.id_department = id_department;
+	public void setWorkstation(String workstation) {
+		this.workstation = workstation;
+	}
+
+
+	public Department getDepartment() {
+		return department;
+	}
+
+	public void setDepartment(Department department) {
+		this.department = department;
 	}
 
 	public ArrayList<User> getContacts() {
