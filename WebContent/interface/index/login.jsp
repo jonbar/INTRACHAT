@@ -14,14 +14,14 @@
 		//TODO
 		UserModel userModel = new UserModel();
 	
-		String received_user = request.getParameter("user");
-		String received_password = request.getParameter("password");
+		String received_user = (String) request.getParameter("user");
+		String received_password = (String) request.getParameter("password");
 		
 		//ERROR
 		User user = userModel.selectUserLogin(received_user, received_password);
 
 		if (user.getName() != null) {
-			%> Usuario correcto <%
+			response.sendRedirect("userMenu.jsp?");
 		} else {
 			%> Usuario incorrecto <%
 		}
