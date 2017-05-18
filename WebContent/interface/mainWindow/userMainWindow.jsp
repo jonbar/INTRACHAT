@@ -10,14 +10,14 @@
 	<table>
 		<tr>
 			<td>
-				<form action="seeFriends/seeContactsForm.jsp" method="post">
+				<form action="seeContacts/seeContacts.jsp" method="post">
 					<input type="submit" value="Ver amigos" name="see_friends" id="see_friends"/>
 				</form>
 			</td>
 		</tr>
 		<tr>
 			<td>
-				<form action="seeMessages/seeMenssages.jsp" method="post">
+				<form action="seeMessages/seeMessages.jsp" method="post">
 					<input type="submit" value="Ver mensajes" name="ver_mensajes" id="ver_mensajes"/>
 				</form>
 			</td>
