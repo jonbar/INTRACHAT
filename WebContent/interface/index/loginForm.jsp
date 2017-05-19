@@ -11,7 +11,7 @@
 </head>
 <body>
 	<form action="login.jsp" method="post">
-		<h1 align="center">LOGIN</h1>
+		<h1 align="center">Iniciar sesion</h1>
 		<table align="center">
 			<tr>
 				<td>
@@ -36,5 +36,14 @@
 			</tr>
 		</table>
 	</form>
+	<%
+		if (request.getParameter("error") != null) {
+	%>
+			<br>
+			<div><p style="background-color:#ff9999; display:inline">Usuario o contraseña incorrectos.</p></div>
+	
+	<%
+		}
+	%>
 </body>
 </html>

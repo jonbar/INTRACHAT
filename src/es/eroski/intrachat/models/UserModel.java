@@ -4,12 +4,11 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
-
-import es.eroski.intrachat.classes.Department;
 import es.eroski.intrachat.classes.User;
 import es.eroski.intrachat.models.conector.Conector;
 
 public class UserModel extends Conector {
+
 
 	public ArrayList<User> selectAllUsers() {
 		ArrayList<User> users = new ArrayList<User>();
@@ -55,7 +54,7 @@ public class UserModel extends Conector {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		return user;
+		return null;
 	}
 	
 	public User selectUserFromId(int id_user) {
