@@ -20,10 +20,6 @@
 		int sesion_luzera = session.getValueNames().length;
 		User user = userModel.selectUserLogin(received_user, received_password);
 
-<<<<<<< HEAD
-		if (user.getName() != null) {
-			response.sendRedirect("userMenu.jsp?");
-=======
 		if (sesion_luzera == 0) {
 
 			if (user != null) {
@@ -31,15 +27,13 @@
 				session.setAttribute("User", user);
 				User user_sesion = (User) session.getAttribute("User");
 				int id_user = user.getId_user();
-				response.sendRedirect("../userMenu.jsp?id_user");
+				response.sendRedirect("../menu/userMenu.jsp");
 			}
 	%>
 	<p>
 		<a href="loginForm.jsp">Logout</a>
 	</p>
 	<%
-		
->>>>>>> branch 'master' of https://github.com/jonbar/intrachat.git
 		} else {
 
 			response.sendRedirect("loginForm.jsp?error=datosmal");

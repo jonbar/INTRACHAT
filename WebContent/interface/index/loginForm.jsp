@@ -11,10 +11,7 @@
 </head>
 <body>
 	<form action="login.jsp" method="post">
-<<<<<<< HEAD
-=======
-		<h1 align="center">Iniciar sesion</h1>
->>>>>>> branch 'master' of https://github.com/jonbar/intrachat.git
+		<h1 align="center">Login</h1>
 		<table align="center">
 			<tr>
 				<td>
