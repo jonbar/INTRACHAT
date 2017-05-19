@@ -11,6 +11,7 @@ import es.eroski.intrachat.models.conector.Conector;
 
 public class UserModel extends Conector {
 
+
 	public ArrayList<User> selectAllUsers() {
 		ArrayList<User> users = new ArrayList<User>();
 		try {

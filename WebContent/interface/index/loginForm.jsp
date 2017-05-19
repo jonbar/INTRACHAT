@@ -11,6 +11,10 @@
 </head>
 <body>
 	<form action="login.jsp" method="post">
+<<<<<<< HEAD
+=======
+		<h1 align="center">Iniciar sesion</h1>
+>>>>>>> branch 'master' of https://github.com/jonbar/intrachat.git
 		<table align="center">
 			<tr>
 				<td>
@@ -35,5 +39,14 @@
 			</tr>
 		</table>
 	</form>
+	<%
+		if (request.getParameter("error") != null) {
+	%>
+			<br>
+			<div><p style="background-color:#ff9999; display:inline">Usuario o contraseña incorrectos.</p></div>
+	
+	<%
+		}
+	%>
 </body>
 </html>
