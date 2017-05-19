@@ -48,14 +48,12 @@ public class UserModel extends Conector {
 	}
 
 	public User selectUserLogin(String userlogin, String password) {
-		int id_user = Integer.parseInt(userlogin);
 		String email = userlogin;
 
 		try {
 			Statement st = this.conexion.createStatement();
 			ResultSet rs = st.executeQuery(
-					"SELECT users.*, departments.* FROM users JOIN departments ON users.id_department = departments.id_department WHERE (users.id_user='"
-							+ id_user + "' or users.email='" + email + "') AND users.password='" + password + "'");
+					"SELECT users.*, departments.* FROM users JOIN departments ON users.id_department = departments.id_department WHERE users.email='" + email + "' AND users.password='" + password + "'");
 			rs.next();
 			User user = new User();
 			user.setId_user(rs.getInt("id_user"));
@@ -73,7 +71,7 @@ public class UserModel extends Conector {
 
 			user.setDepartment(department);
 
-
+			return user;
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
