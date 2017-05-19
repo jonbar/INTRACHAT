@@ -10,8 +10,10 @@
 	<title>Login</title>
 </head>
 <body>
+
 	<form action="login.jsp" method="post">
 		<h1 align="center">Login</h1>
+
 		<table align="center">
 			<tr>
 				<td>
