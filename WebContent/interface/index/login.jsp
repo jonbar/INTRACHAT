@@ -14,8 +14,8 @@
 		
 		UserModel userModel = new UserModel();
 	
-		String received_user = request.getParameter("user");
-		String received_password = request.getParameter("password");
+		String received_user = (String) request.getParameter("user");
+		String received_password = (String) request.getParameter("password");
 		
 		int sesion_luzera = session.getValueNames().length;
 		User user = userModel.selectUserLogin(received_user, received_password);
@@ -35,7 +35,6 @@
 		<a href="loginForm.jsp">Logout</a>
 	</p>
 	<%
-		
 		} else {
 
 			response.sendRedirect("loginForm.jsp?error=datosmal");
