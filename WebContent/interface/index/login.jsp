@@ -25,9 +25,10 @@
 			if (user != null) {
 
 				session.setAttribute("User", user);
+				
 				User user_sesion = (User) session.getAttribute("User");
 				int id_user = user.getId_user();
-				response.sendRedirect("../userMenu.jsp?id_user");
+				response.sendRedirect("../menu/userMenu.jsp");
 			}
 	%>
 	<p>

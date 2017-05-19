@@ -11,7 +11,7 @@
 </head>
 <body>
 	<form action="login.jsp" method="post">
-		<h1 align="center">Iniciar sesion</h1>
+		<h1 align="center">LOGIN</h1>
 		<table align="center">
 			<tr>
 				<td>
