@@ -24,17 +24,10 @@
 
 			if (user != null) {
 
-				session.setAttribute("User", user);
-				
-				User user_sesion = (User) session.getAttribute("User");
-				int id_user = user.getId_user();
+				session.setAttribute("User", user);				
 				response.sendRedirect("../menu/userMenu.jsp");
 			}
-	%>
-	<p>
-		<a href="loginForm.jsp">Logout</a>
-	</p>
-	<%
+	
 		} else {
 
 			response.sendRedirect("loginForm.jsp?error=datosmal");
