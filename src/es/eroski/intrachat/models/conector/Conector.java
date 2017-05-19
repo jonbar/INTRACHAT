@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 public class Conector {
 	protected Connection conexion;
-	protected Conector() {
+	public Conector() {
 
 		try {
 			Class.forName("com.mysql.jdbc.Driver");

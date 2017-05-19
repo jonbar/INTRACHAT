@@ -43,16 +43,16 @@ public class ContactModel extends Conector {
 				//contactua sortu
 				User contact = new User();
 				contact.setId_user(rs.getInt("contacts.id_contact"));
-				contact.setPassword(rs.getString("user.password"));
-				contact.setName(rs.getString("user.name"));
-				contact.setLast_name(rs.getString("user.last_name"));
-				contact.setEmail(rs.getString("user.email"));
-				contact.setWorkstation(rs.getString("user.workstation"));
+				contact.setPassword(rs.getString("users.password"));
+				contact.setName(rs.getString("users.name"));
+				contact.setLast_name(rs.getString("users.last_name"));
+				contact.setEmail(rs.getString("users.email"));
+				contact.setWorkstation(rs.getString("users.workstation"));
 				//departamentua sortu
 				Department department = new Department();
-				department.setId_department(rs.getInt("department.id_department"));
-				department.setName(rs.getString("department.name"));
-				department.setFloor(rs.getInt("department.floor"));
+				department.setId_department(rs.getInt("departments.id_department"));
+				department.setName(rs.getString("departments.name"));
+				department.setFloor(rs.getInt("departments.floor"));
 				//contacti depart
 				contact.setDepartment(department);
 				
