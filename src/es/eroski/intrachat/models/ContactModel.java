@@ -37,7 +37,7 @@ public class ContactModel extends Conector {
 		ArrayList<User> contacts = new ArrayList<User>();
 		try {
 			Statement st = this.conexion.createStatement();
-			ResultSet rs = st.executeQuery("SELECT contacts.*, users.*, departments.* from (contacts join users on contacts.id_contact = users.id_user ) join departments on users.id_department = departments.id_department where contacts.id_user=1");
+			ResultSet rs = st.executeQuery("SELECT contacts.*, users.*, departments.* from (contacts join users on contacts.id_contact = users.id_user ) join departments on users.id_department = departments.id_department where contacts.id_user='" +  id_user + "'");
 			while (rs.next()) {
 				
 				//contaktua sortu

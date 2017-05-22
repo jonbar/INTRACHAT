@@ -24,7 +24,7 @@
 		</tr>
 		<tr>
 			<td>
-				<form action="../seeMessages/seeMessages.jsp" method="post">
+				<form action="../messages/showMessages.jsp" method="post">
 					<input type="submit" style="width: 150px; height: 25px"
 						value="Ver mensajes" name="ver_mensajes" id="ver_mensajes" />
 				</form>

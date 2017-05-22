@@ -10,6 +10,8 @@ public class Message {
 	private String subject;
 	private String text;
 	private Date date;
+	User sender;
+	User receiver;
 
 	public Message() {
 		super();
