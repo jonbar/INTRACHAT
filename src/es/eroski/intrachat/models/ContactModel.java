@@ -40,7 +40,7 @@ public class ContactModel extends Conector {
 			ResultSet rs = st.executeQuery("SELECT contacts.*, users.*, departments.* from (contacts join users on contacts.id_contact = users.id_user ) join departments on users.id_department = departments.id_department where contacts.id_user=1");
 			while (rs.next()) {
 				
-				//contactua sortu
+				//contaktua sortu
 				User contact = new User();
 				contact.setId_user(rs.getInt("contacts.id_contact"));
 				contact.setPassword(rs.getString("users.password"));
