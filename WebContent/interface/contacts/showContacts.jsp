@@ -43,7 +43,7 @@
 				<td><%= contact.getEmail()%></td>
 				<td><%= contact.getDepartment().getName() %></td> 
 				
-				<td> <a href="deleteContact.jsp?id=<%=contact.getId_user()%>">Eliminar</a></td>
+				<td> <a href="deleteContact.jsp?id=<%=contact.getId_user()%>"><img src="../../img/delete.png" height="20px" width="20px" /></a></td>
 			
 			</tr>
 			
@@ -51,6 +51,13 @@
 				} //cierre for
 			%>
 		</table>
+		<br>
+		<br>
+		<h3>Agregar contacto:</h3>
+		<form action="addContact.jsp" method="post">
+			<input type="text" name="contact" id="contact" width="500px"/><br>
+			<input type="submit" value="Agregar" name="addContact" id="addContact" style="margin-top: 5px"/>
+		</form>
 	</div>
 </body>
 </html>

@@ -9,18 +9,20 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 	<title>Login</title>
 </head>
-<body>
-
+<body style="background-color:#E6E6E6">
 	<form action="login.jsp" method="post">
-		<h1 align="center">Login</h1>
+		
 
-		<table align="center">
+		<table align="center" style="margin-top: 20%">
+			<tr>
+				<td colspan="2" align="center"><img style="margin-bottom: 15px" src="../../img/eroski_logo.png" align="middle" width="75px" height="75px"/></td>		
+			</tr>
 			<tr>
 				<td>
 					Usuario:
 				</td>
 				<td>
-					<input type="text" name="user" id="user" />
+					<input type="text" value="mprieto@eroski.net" name="user" id="user" />
 				</td>
 			</tr>
 			<tr style="margin-top: 50px;">
@@ -28,7 +30,7 @@
 					Contraseña:
 				</td>
 				<td>
-					<input type="password" name="password" id="password" style="margin-top: 5px" />
+					<input type="password" value="12345678" name="password" id="password" style="margin-top: 5px" />
 				</td>
 			</tr>
 			<tr>

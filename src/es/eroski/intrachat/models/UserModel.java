@@ -111,7 +111,54 @@ public class UserModel extends Conector {
 		}
 		return null;
 	}
+	
+	public User selectUserFromEmail(String email) {
 
+		User user = null;
+		try {
+			Statement st = this.conexion.createStatement();
+			ResultSet rs = st.executeQuery(
+					"SELECT users.*, departments.* FROM departments JOIN users ON users.id_department = departments.id_department WHERE users.email ='"
+							+ email + "'");
+			rs.next();
+			user = new User();
+			user.setId_user(rs.getInt("id_user"));
+			user.setPassword(rs.getString("password"));
+			user.setName(rs.getString("name"));
+			user.setLast_name(rs.getString("last_name"));
+			user.setEmail(rs.getString("email"));
+			user.setWorkstation(rs.getString("workstation"));
+
+			// departamentua sortu
+			Department department = new Department();
+			department.setId_department(rs.getInt("departments.id_department"));
+			department.setName(rs.getString("departments.name"));
+			department.setFloor(rs.getInt("departments.floor"));
+
+			user.setDepartment(department);
+
+			return user;
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return user;
+	}
+
+	public void updateUser (int id_user, String password, String name, String last_name){
+		try {
+			Statement st = super.getConexion().createStatement();
+			st.executeUpdate("UPDATE users SET "
+					+ "password = '" + password + "', "
+					+ "name = '" + name + "', "
+					+ "last_name = '" + last_name + "' "
+					+ "WHERE id_user = '" + id_user + "'");
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
 //	public void insertUser(User user) {
 //		Statement st;
 //		try {
