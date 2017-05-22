@@ -13,7 +13,11 @@
  	<%@ page import="java.sql.*"%>
 	<%
 		UserModel userModel = new UserModel();
-		User user = userModel.selectUserFromId(2);
+		User user = new User();
+		
+		int id = (int) session.getValueNames(String.ValueOf(user.getId_user()));
+		//int id = session.getValue(user.getId_user());
+		user = userModel.selectUserFromId(id);
 	%>
 	<table>
 		<tr>

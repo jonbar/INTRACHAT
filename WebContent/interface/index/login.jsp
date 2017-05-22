@@ -16,8 +16,9 @@
 	
 		String received_user = (String) request.getParameter("user");
 		String received_password = (String) request.getParameter("password");
+		int sesion_luzera = 0;
 		
-		int sesion_luzera = session.getValueNames().length;
+		sesion_luzera = session.getValueNames().length;
 		User user = userModel.selectUserLogin(received_user, received_password);
 
 		if (sesion_luzera == 0) {
