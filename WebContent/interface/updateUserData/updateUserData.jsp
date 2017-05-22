@@ -15,9 +15,9 @@
 		UserModel userModel = new UserModel();
 		User user = new User();
 		
-		int id = (int) session.getValueNames(String.ValueOf(user.getId_user()));
+		//int id = (int) session.getValueNames(String.ValueOf(user.getId_user()));
 		//int id = session.getValue(user.getId_user());
-		user = userModel.selectUserFromId(id);
+		user = userModel.selectUserFromId(5);
 	%>
 	<table>
 		<tr>
