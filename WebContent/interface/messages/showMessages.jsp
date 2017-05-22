@@ -29,17 +29,21 @@
 		<table class="table table-bordered table-striped">
 			<tr align="center">
 				<th>DE</th>
+				<th>DEPARTAMENTO</th>
 				<th>ASUNTO</th>
 				<th>FECHA</th>
+				<th></th>
 			</tr>
 			<%
 				for (Message message : received_messages) {
 			%>
 
 			<tr>
-				<td><%= message.getSender().getN%></td>
+				<td><%= message.getSender().getEmail()%></td>
+				<td><%= message.getSender().getDepartment().getName()%></td>
 				<td><%= message.getSubject()%></td>
-				<td><%= message.getDate()%></td> 
+				<td><%= message.getDate()%></td>
+				<td>Ver detalles</td> 
 			
 			</tr>
 			
@@ -54,17 +58,21 @@
 		<table class="table table-bordered table-striped">
 			<tr align="center">
 				<th>PARA</th>
+				<th>DEPARTAMENTO</th>
 				<th>ASUNTO</th>
 				<th>FECHA</th>
+				<th></th>
 			</tr>
 			<%
 				for (Message message : sended_messages) {
 			%>
 
 			<tr>
-				<td><%= message.getId_receiver()%></td>
+				<td><%= message.getReceiver().getEmail()%></td>
+				<td><%= message.getReceiver().getDepartment().getName()%></td>
 				<td><%= message.getSubject()%></td>
-				<td><%= message.getDate()%></td> 
+				<td><%= message.getDate()%></td>
+				<td>Ver detalles</td>
 			
 			</tr>
 			

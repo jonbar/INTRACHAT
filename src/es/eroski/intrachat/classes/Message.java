@@ -10,9 +10,10 @@ public class Message {
 	private String subject;
 	private String text;
 	private Date date;
-	User sender;
-	User receiver;
+	private User sender;
+	private User receiver;
 
+	
 	public Message() {
 		super();
 		
@@ -65,5 +66,22 @@ public class Message {
 	public void setDate(Date date) {
 		this.date = date;
 	}
+	
+	public User getSender() {
+		return sender;
+	}
+
+	public void setSender(User sender) {
+		this.sender = sender;
+	}
+
+	public User getReceiver() {
+		return receiver;
+	}
+
+	public void setReceiver(User receiver) {
+		this.receiver = receiver;
+	}
+
 
 }

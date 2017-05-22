@@ -30,7 +30,7 @@
 			//}
 		}else{
 			%>
-			<h1>Usuario no registrado</h1>
+			<h1>Usuario no registrado.</h1>
 			<h3>Por favor, comprueba que el usuario introducido es correcto.</h3>
 			<a href="showContact.jsp" id="goBack" >Volver</a>
 			<%
