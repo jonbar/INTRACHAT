@@ -19,8 +19,10 @@
 	//departments.id_department where contacts.id_user=1
 	
 		UserModel userModel = new UserModel();
-		int id_user=1;
-		User user = userModel.selectUserFromId(id_user);
+		User user = new User();
+		int id_user = (int) session.getAttribute(String.valueOf((user.getId_user())));
+		user =	userModel.selectUserFromId(id_user);
+		
 		ContactModel contactModel = new ContactModel();
 		ArrayList<User> contacts = contactModel.selectContactsFromUser(id_user);
 		%>
@@ -34,15 +36,14 @@
 				<th></th>
 			</tr>
 			<%
-				for (Contact contact : contacts) {
+				for (User contact : contacts) {
 			%>
 
 			<tr>
 				<td><%=user.getName()%></td>
 				<td><%=user.getLast_name()%></td>
 				<td><%=user.getEmail()%></td>
-				<!-- Hay que cambiar para que salga el nombre -->
-				<td><%=user.getId_department()%></td> 
+				<td>AQUI VA EL DEPARTAMENTO</td> 
 				
 				<td> <a href="deleteContact.jsp?id=<%=contact.getId_user()%>">Eliminar</a></td>
 			
