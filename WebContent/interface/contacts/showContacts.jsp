@@ -17,12 +17,15 @@
 	
 	<%	
 		UserModel userModel = new UserModel();
+		/* User user = new User();
+		int id_user = (int) session.getAttribute(String.valueOf((user.getId_user())));
+		user =	userModel.selectUserFromId(1); */
 		User user = new User();
-		//int id_user = (int) session.getAttribute(String.valueOf((user.getId_user())));
-		user =	userModel.selectUserFromId(1);
+		user = (User) session.getAttribute("User");
+		int id_user = user.getId_user();
 		
 		ContactModel contactModel = new ContactModel();
-		ArrayList<User> contacts = contactModel.selectContactsFromUser(1);
+		ArrayList<User> contacts = contactModel.selectContactsFromUser(id_user);
 		%>
 	<div class="table-responsive">
 		<table class="table table-bordered table-striped">
@@ -43,7 +46,7 @@
 				<td><%= contact.getEmail()%></td>
 				<td><%= contact.getDepartment().getName() %></td> 
 				
-				<td> <a href="deleteContact.jsp?id=<%=contact.getId_user()%>"><img src="../../img/delete.png" height="20px" width="20px" /></a></td>
+				<td> <a href="deleteContact.jsp?del_id=<%=contact.getId_user()%>"><img src="../../img/delete.png" height="20px" width="20px" /></a></td>
 			
 			</tr>
 			
@@ -55,7 +58,7 @@
 		<br>
 		<h3>Agregar contacto:</h3>
 		<form action="addContact.jsp" method="post">
-			<input type="text" name="contact" id="contact" width="500px"/><br>
+			<input type="text" name="contact" id="contact" width="1000px"/><br>
 			<input type="submit" value="Agregar" name="addContact" id="addContact" style="margin-top: 5px"/>
 		</form>
 	</div>

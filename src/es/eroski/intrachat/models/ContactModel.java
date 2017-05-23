@@ -67,5 +67,15 @@ public class ContactModel extends Conector {
 		}
 		return null;
 	}
+	
+	public void deleteContact(int id_user, int id_contact){
+		try {
+			Statement st = super.getConexion().createStatement();
+			st.execute("DELETE FROM contacts " + "WHERE id_user='" + id_user + "' and id_contact='" + id_contact + "'");
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 
 }

@@ -21,10 +21,13 @@
 		
 		User userEmail = userModel.selectUserFromEmail(email);
 		ArrayList<User> users = userModel.selectAllUsers();
-		
+
+		if (users.getEmail.contains((userEmail.getEmail()))){
+			
+		}
 		if(users.contains(userEmail)){
-			//if(){
-				
+			if(){
+				response.sendRedirect("showContacts.jsp");
 			//}else{
 
 			//}
