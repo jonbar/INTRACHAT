@@ -27,11 +27,11 @@
 				contactModel.insertContact(userSesion.getId_user(), userEmail.getId_user());
 				response.sendRedirect("showContacts.jsp");
 			} else {
-				out.println("Este usuario ya está en tu lista de contactos.");
+				response.sendRedirect("showContacts.jsp?error=yaencontactos");
 			}
 		} else {
 
-			out.println("Este usuario no existe.");
+			response.sendRedirect("showContacts.jsp?error=usernoexiste");
 
 		}
 	%>
