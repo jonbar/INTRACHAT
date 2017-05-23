@@ -24,7 +24,8 @@
 		ArrayList<Message> received_messages = messageModel.selectReceivedMessagesFromUser(id_user);
 		ArrayList<Message> sended_messages = messageModel.selectSendedMessagesFromUser(id_user);
 		%>
-		<p>MENSAJES RECIBIDOS</p>
+	<div style="width=50%; height=100% text-left">
+		<h4>MENSAJES RECIBIDOS</h4>
 	<div class="table-responsive">
 		<table class="table table-bordered table-striped">
 			<tr align="center">
@@ -53,7 +54,7 @@
 		</table>
 	</div>
 	
-			<p>MENSAJES ENVIADOS</p>
+			<h4>MENSAJES ENVIADOS</h4>
 	<div class="table-responsive">
 		<table class="table table-bordered table-striped">
 			<tr align="center">
@@ -80,6 +81,13 @@
 				} //cierre for
 			%>
 		</table>
+	</div>
+	</div>
+	<div style="width=50%; height=100% text-right">
+	<div>
+	<h4>ASUNTO</h4>
+	<br>
+	<h4>MENSAJE</h4>
 	</div>
 
 </body>
