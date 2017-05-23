@@ -15,26 +15,20 @@
 
 		<table align="center" style="margin-top: 20%">
 			<tr>
-				<td colspan="2" align="center"><img style="margin-bottom: 15px" src="../../img/eroski_logo.png" align="middle" width="75px" height="75px"/></td>		
+				<td align="center"><img style="margin-bottom: 15px" src="../../img/eroski_logo.png" align="middle" width="75px" height="75px"/></td>		
 			</tr>
 			<tr>
 				<td>
-					Usuario:
-				</td>
-				<td>
-					<input type="text" value="mprieto@eroski.net" name="user" id="user" />
+					<input type="text" name="user" id="user" placeholder="Email"/>
 				</td>
 			</tr>
 			<tr style="margin-top: 50px;">
 				<td>
-					Contraseña:
-				</td>
-				<td>
-					<input type="password" value="12345678" name="password" id="password" style="margin-top: 5px" />
+					<input type="password"  name="password" id="password" style="margin-top: 5px" placeholder="Contraseña" />
 				</td>
 			</tr>
 			<tr>
-				<td colspan="2" align="center">
+				<td align="center">
 					<input style="height:25px; margin-top:10px; border-radius: 5px" value="Entrar" type="submit" name="login" id="login" />
 				</td>
 			</tr>

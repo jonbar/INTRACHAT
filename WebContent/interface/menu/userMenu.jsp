@@ -32,7 +32,7 @@
 		</tr>
 		<tr>
 			<td>
-				<form action="../writteMessage/writteMessage.jsp" method="post">
+				<form action="../messages/writeMessage.jsp" method="post">
 					<input style="width: 150px; height: 25px" type="submit"
 						value="Escribir mensaje" name="Escribir_mensaje"
 						id="Escribir_mensaje" />

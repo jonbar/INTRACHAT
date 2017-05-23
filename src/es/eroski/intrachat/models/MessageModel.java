@@ -146,4 +146,17 @@ public class MessageModel extends Conector {
 		}
 		return null;
 	}
+
+	public void insert(Message message) {
+		Statement st;
+		try {
+			st = this.conexion.createStatement();
+			st.execute("INSERT INTO messages (id_sender, id_receiver, subject, text, date) VALUES ('"
+					+ message.getId_sender() + "', '" + message.getId_receiver() + "','" + message.getSubject() + "', '"
+					+ message.getText() + "', '" + message.getDate() + "')");
+		} catch (SQLException e) {
+
+			e.printStackTrace();
+		}
+	}
 }
