@@ -7,6 +7,13 @@
 <title>Escribir mensaje</title>
 </head>
 <body>
-
+<p> Elegir contacto: </p> <select name="contact" id="contact">
+					<%
+					for (User contact : contacts) {
+					%>
+					<option value="ARABA"><%= %></option>
+					<option value="BIZKAIA">BIZKAIA</option>
+					<option value="GIPUZKOA">GIPUZKOA</option>
+				   </select><br> 
 </body>
 </html>
