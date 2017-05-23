@@ -17,9 +17,6 @@
 	
 	<%	
 		UserModel userModel = new UserModel();
-		/* User user = new User();
-		int id_user = (int) session.getAttribute(String.valueOf((user.getId_user())));
-		user =	userModel.selectUserFromId(1); */
 		User user = new User();
 		user = (User) session.getAttribute("User");
 		int id_user = user.getId_user();
@@ -55,8 +52,7 @@
 			%>
 		</table>
 		<br>
-		<br>
-		<h3>Agregar contacto:</h3>
+		<h4>Agregar contacto:</h4>
 		<form action="addContact.jsp" method="post">
 			<input type="text" name="contact" id="contact" width="1000px"/><br>
 			<input type="submit" value="Agregar" name="addContact" id="addContact" style="margin-top: 5px"/>

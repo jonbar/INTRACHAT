@@ -11,6 +11,7 @@ import es.eroski.intrachat.classes.User;
 import es.eroski.intrachat.models.conector.Conector;
 
 
+
 public class ContactModel extends Conector {
 
 
@@ -67,6 +68,19 @@ public class ContactModel extends Conector {
 		}
 		return null;
 	}
+	
+	public void insertContact(int id_user, int id_contact) {
+		Statement st;
+		try {
+			st = super.getConexion().createStatement();
+			st.execute("INSERT INTO contacts (id_user,id_contact) " + "VALUES ('" + id_user + "','" + id_contact + "')");
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+
 	
 	public void deleteContact(int id_user, int id_contact){
 		try {

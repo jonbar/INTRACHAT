@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -7,36 +7,32 @@
 <title>Añadir contacto</title>
 </head>
 <body>
-	<%@ page import="es.eroski.intrachat.models.*" %>
-	<%@ page import="es.eroski.intrachat.classes.*" %>
-	<%@ page import="java.util.*" %>
+	<%@ page import="es.eroski.intrachat.models.*"%>
+	<%@ page import="es.eroski.intrachat.classes.*"%>
+	<%@ page import="java.util.*"%>
 	<%
 		String email = request.getParameter("contact");
 	%>
-	<% 
+	<%
 		UserModel userModel = new UserModel();
 		ContactModel contactModel = new ContactModel();
-		
-		User userSesion = (User) session.getAttribute("user");
-		
+
+		User userSesion = (User) session.getAttribute("User");
 		User userEmail = userModel.selectUserFromEmail(email);
-		ArrayList<User> users = userModel.selectAllUsers();
 
-		if (users.getEmail.contains((userEmail.getEmail()))){
-			
-		}
-		if(users.contains(userEmail)){
-			if(){
+		ArrayList<User> contacts = contactModel.selectContactsFromUser(userSesion.getId_user());
+
+		if (userEmail != null) {
+			if (!contacts.contains(userEmail)) {
+				contactModel.insertContact(userSesion.getId_user(), userEmail.getId_user());
 				response.sendRedirect("showContacts.jsp");
-			//}else{
+			} else {
+				out.println("Este usuario ya está en tu lista de contactos.");
+			}
+		} else {
 
-			//}
-		}else{
-			%>
-			<h1>Usuario no registrado.</h1>
-			<h3>Por favor, comprueba que el usuario introducido es correcto.</h3>
-			<a href="showContact.jsp" id="goBack" >Volver</a>
-			<%
+			out.println("Este usuario no existe.");
+
 		}
 	%>
 </body>
