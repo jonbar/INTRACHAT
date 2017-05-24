@@ -66,5 +66,25 @@
 	</div>
 	</div>
 	</div>
+	
+	<%
+		if (request.getParameter("error") != null) {
+			if(request.getParameter("error").equals("yaencontactos")){
+	%>
+			<br>
+			<div><p style="background-color:#ff9999; display:inline">Usuario ya en tu lista de contactos.</p></div>
+	
+	<%
+			} 
+			if (request.getParameter("error").equals("usernoexiste")){
+				%>
+				<br>
+				<div><p style="background-color:#ff9999; display:inline">Usuario no encontrado.</p></div>
+		
+		<%
+			}
+			}
+			
+	%>
 </body>
 </html>
