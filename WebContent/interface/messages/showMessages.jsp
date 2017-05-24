@@ -27,6 +27,7 @@
 		MessageModel messageModel = new MessageModel();
 		ArrayList<Message> received_messages = messageModel.selectReceivedMessagesFromUser(id_user);
 		ArrayList<Message> sended_messages = messageModel.selectSendedMessagesFromUser(id_user);
+		//
 	%>
 	<form action="../menu/userMenu.jsp" method="post">
 		<img src="../../img/go_back.png" height="15px" width="15px">

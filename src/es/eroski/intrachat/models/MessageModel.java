@@ -65,7 +65,7 @@ public class MessageModel extends Conector {
 		try {
 			Statement st = this.conexion.createStatement();
 			ResultSet rs = st.executeQuery(
-					"SELECT messages.*, users.*, departments.* from (messages join users on messages.id_sender = users.id_user ) join departments on users.id_department = departments.id_department where messages.id_sender='"
+					"SELECT messages.*, users.*, departments.* from (messages join users on messages.id_receiver = users.id_user ) join departments on users.id_department = departments.id_department where messages.id_sender='"
 							+ id_user + "'");
 			while (rs.next()) {
 
@@ -78,7 +78,7 @@ public class MessageModel extends Conector {
 				message.setDate(rs.getDate("messages.date"));
 
 				User receiver = new User();
-				receiver.setId_user(rs.getInt("users.id_user"));
+				receiver.setId_user(rs.getInt("messages.id_receiver"));
 				receiver.setPassword(rs.getString("users.password"));
 				receiver.setName(rs.getString("users.name"));
 				receiver.setLast_name(rs.getString("users.last_name"));
@@ -108,7 +108,7 @@ public class MessageModel extends Conector {
 		try {
 			Statement st = this.conexion.createStatement();
 			ResultSet rs = st.executeQuery(
-					"SELECT messages.*, users.*, departments.* from (messages join users on messages.id_receiver = users.id_user ) join departments on users.id_department = departments.id_department where messages.id_receiver='"
+					"SELECT messages.*, users.*, departments.* from (messages join users on messages.id_sender = users.id_user ) join departments on users.id_department = departments.id_department where messages.id_receiver='"
 							+ id_user + "'");
 			while (rs.next()) {
 
@@ -121,7 +121,7 @@ public class MessageModel extends Conector {
 				message.setDate(rs.getDate("messages.date"));
 
 				User sender = new User();
-				sender.setId_user(rs.getInt("users.id_user"));
+				sender.setId_user(rs.getInt("messages.id_sender"));
 				sender.setPassword(rs.getString("users.password"));
 				sender.setName(rs.getString("users.name"));
 				sender.setLast_name(rs.getString("users.last_name"));

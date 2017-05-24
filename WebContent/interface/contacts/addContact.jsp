@@ -34,6 +34,7 @@
 			response.sendRedirect("showContacts.jsp?error=usernoexiste");
 
 		}
+		
 	%>
 </body>
 </html>

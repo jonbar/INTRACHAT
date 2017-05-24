@@ -12,41 +12,31 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Menu</title>
 </head>
-<body>
+<body style="background-color: #E6E6E6">
 	<div class="container">
 	<div class="row">
 	<table align="center">
 		<tr>
 			<td>
 				<form action="../contacts/showContacts.jsp" method="post">
-					<input style="width: 150px; height: 25px; border-radius: 5px" type="submit"
-						value="Ver amigos" name="see_friends" id="see_friends" />
+					<input value="Ver contactos" type=image src="../../img/showContacts.png" width="200" height="200">
 				</form>
 			</td>
-		</tr>
-		<tr>
 			<td>
 				<form action="../messages/showMessages.jsp" method="post">
-					<input type="submit" style="width: 150px; height: 25px; border-radius: 5px"
-						value="Ver mensajes" name="ver_mensajes" id="ver_mensajes" />
+					<input value="Ver mensajes" type=image src="../../img/showMessages.png" width="200" height="200">
 				</form>
 			</td>
 		</tr>
 		<tr>
 			<td>
-				<form action="../messages/writeMessage.jsp" method="post">
-					<input style="width: 150px; height: 25px; border-radius: 5px" type="submit"
-						value="Escribir mensaje" name="Escribir_mensaje"
-						id="Escribir_mensaje" />
+				<form action="../messages/newMessage.jsp" method="post">
+					<input value="escribir mensaje" type=image src="../../img/newMessage.png" width="200" height="200">
 				</form>
 			</td>
-		</tr>
-		<tr>
 			<td>
 				<form action="../updateUserData/updateUserData.jsp" method="post">
-					<input style="width: 150px; height: 25px; border-radius: 5px" type="submit"
-						value="Modificar datos" name="Modificar_datos"
-						id="Modificar_datos" />
+					<input value="Modify data" type=image src="../../img/settings.png" width="200" height="200">
 				</form>
 			</td>
 		</tr>

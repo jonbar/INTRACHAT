@@ -24,6 +24,12 @@
 		ContactModel contactModel = new ContactModel();
 		ArrayList<User> contacts = contactModel.selectContactsFromUser(id_user);
 		%>
+		<form action="../menu/userMenu.jsp" method="post">
+		<img src="../../img/go_back.png" height="15px" width="15px">
+		<input style="border-radius: 5px;" type="submit" name="volver" id="volver" value="Volver" />
+	</form>
+		<div class="container">
+		<div class="row">
 	<div class="table-responsive">
 		<table class="table table-bordered table-striped">
 			<tr align="center">
@@ -57,6 +63,8 @@
 			<input type="text" name="contact" id="contact" width="1000px"/><br>
 			<input type="submit" value="Agregar" name="addContact" id="addContact" style="margin-top: 5px"/>
 		</form>
+	</div>
+	</div>
 	</div>
 </body>
 </html>
