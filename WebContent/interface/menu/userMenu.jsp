@@ -30,7 +30,7 @@
 		</tr>
 		<tr>
 			<td>
-				<form action="../messages/newMessage.jsp" method="post">
+				<form action="../messages/writeMessage.jsp" method="post">
 					<input value="escribir mensaje" type=image src="../../img/newMessage.png" width="200" height="200">
 				</form>
 			</td>
