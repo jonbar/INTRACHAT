@@ -7,31 +7,27 @@
 <title>Iniciar sesion</title>
 </head>
 <body>
-	<%@ page import="es.eroski.intrachat.models.*" %>
-	<%@ page import="es.eroski.intrachat.classes.*" %>
-	<%@ page import="java.util.*" %>
+	<%@ page import="es.eroski.intrachat.models.*"%>
+	<%@ page import="es.eroski.intrachat.classes.*"%>
+	<%@ page import="java.util.*"%>
 	<%
-		
 		UserModel userModel = new UserModel();
-	
+
 		String received_user = (String) request.getParameter("user");
 		String received_password = (String) request.getParameter("password");
-		int sesion_luzera = 0;
-		
-		sesion_luzera = session.getValueNames().length;
+		int session_lenght = 0;
+
+		session_lenght = session.getValueNames().length;
 		User user = userModel.selectUserLogin(received_user, received_password);
 
-		if (sesion_luzera == 0) {
+		if (session_lenght == 0) {
 
-			if (user != null) {
-
-				session.setAttribute("User", user);				
-				response.sendRedirect("../menu/userMenu.jsp");
-			}
-
-		} else {
-
+		if (user == null) {
 			response.sendRedirect("loginForm.jsp?error=datosmal");
+		} else if (user != null) {
+			session.setAttribute("User", user);
+			response.sendRedirect("../menu/userMenu.jsp");
+		}
 		}
 	%>
 

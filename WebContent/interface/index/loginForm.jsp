@@ -10,6 +10,7 @@
 	<title>Login</title>
 </head>
 <body style="background-color:#E6E6E6">
+	<% session.invalidate(); %>
 	<form action="login.jsp" method="post">
 		
 

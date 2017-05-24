@@ -21,11 +21,11 @@
 		UserModel userModel = new UserModel();
 		User user = new User();
 		user = (User) session.getAttribute("User");
-	%>bienvenido
-	<%=user.getName()%>
-	<%
-		
 	%>
+	<form action="../menu/userMenu.jsp" method="post">
+		<img src="../../img/go_back.png" height="15px" width="15px">
+		<input style="border-radius: 5px;" type="submit" name="volver" id="volver" value="Volver" />
+	</form>
 	<form action="update.jsp" method="post">
 		<table>
 			<tr>
