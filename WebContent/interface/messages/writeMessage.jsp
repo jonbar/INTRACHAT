@@ -21,6 +21,12 @@
 		User user = (User) session.getAttribute("User");
 		ArrayList<User> userContacts = contactModel.selectContactsFromUser(user.getId_user());
 	%>
+	<form action="../menu/userMenu.jsp" method="post">
+		<img src="../../img/go_back.png" height="15px" width="15px">
+		<input style="border-radius: 5px;" type="submit" name="volver" id="volver" value="Volver" />
+	</form>
+	<div class="container">
+	<div class="row">
 	<p> Elegir contacto: </p> 
 	<form action="sendMessage.jsp" method="post">
 		<select name="contact" id="contact">
@@ -39,6 +45,8 @@
 		 <textarea name="text" rows="5" cols="50" style="border-radius: 5px"></textarea>
 		<br>
 		 <input type="submit" value="Enviar" name="send" id="send" style="border-radius: 5px;"/>
-	 </form>	
+	 </form>
+	 </div>
+	 </div>	
 </body>
 </html>
