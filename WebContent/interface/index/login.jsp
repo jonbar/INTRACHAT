@@ -16,7 +16,7 @@
 		String received_user = (String) request.getParameter("user");
 		String received_password = (String) request.getParameter("password");
 		int session_lenght = 0;
-
+		
 		session_lenght = session.getValueNames().length;
 		User user = userModel.selectUserLogin(received_user, received_password);
 

@@ -6,10 +6,12 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="../../css/showContacts.css" type="text/css" media="all" />
+<link rel="stylesheet" href="../../css/general.css" type="text/css" media="all" />
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Mis contactos</title>
 </head>
-<body>
+<body class="ligth">
 	<%@ page import="es.eroski.intrachat.models.*" %>
 	<%@ page import="es.eroski.intrachat.classes.*" %>
 	<%@ page import="java.util.*" %>
@@ -25,12 +27,12 @@
 		ArrayList<User> contacts = contactModel.selectContactsFromUser(id_user);
 		%>
 		<form action="../menu/userMenu.jsp" method="post">
-		<img src="../../img/go_back.png" height="15px" width="15px">
-		<input style="border-radius: 5px;" type="submit" name="volver" id="volver" value="Volver" />
-	</form>
+			<img src="../../img/go_back.png" height="15px" width="15px">
+			<input style="border-radius: 5px;" type="submit" name="volver" id="volver" value="Volver" />
+		</form>
 		<div class="container">
 		<div class="row">
-	<div class="table-responsive">
+		<div class="table-responsive">
 		<table class="table table-bordered table-striped">
 			<tr align="center">
 				<th>NOMBRE</th>

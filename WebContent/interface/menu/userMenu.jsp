@@ -10,34 +10,49 @@
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link rel="stylesheet" href="../../css/menu.css" type="text/css" media="all" />
+<link rel="stylesheet" href="../../css/general.css" type="text/css" media="all" />
 <title>Menu</title>
 </head>
-<body style="background-color: #E6E6E6">
+<body>
+	<script>
+	$(document).ready(function(){
+	    $('[data-toggle="tooltip"]').tooltip();   
+	});
+	</script>
 	<div class="container">
 	<div class="row">
-	<table align="center">
+	<table align="center" class="menu">
 		<tr>
 			<td>
+				<a href="#" data-toggle="tooltip" data-placement="top" title="Ver contactos" >
 				<form action="../contacts/showContacts.jsp" method="post">
-					<input value="Ver contactos" type=image src="../../img/showContacts.png" width="200" height="200">
+						<input value="Ver contactos" type=image src="../../img/showContacts.png" width="200" height="200">
 				</form>
+				</a>
 			</td>
 			<td>
+				<a href="#" data-toggle="tooltip" title="Ver mensajes" data-placement="top">
 				<form action="../messages/showMessages.jsp" method="post">
-					<input value="Ver mensajes" type=image src="../../img/showMessages.png" width="200" height="200">
+						<input value="Ver mensajes" type=image src="../../img/showMessages.png" width="200" height="200">
 				</form>
+				</a>
 			</td>
 		</tr>
 		<tr>
 			<td>
+				<a href="#" data-toggle="tooltip" title="Escribir mensaje" data-placement="bottom">
 				<form action="../messages/writeMessage.jsp" method="post">
 					<input value="escribir mensaje" type=image src="../../img/newMessage.png" width="200" height="200">
 				</form>
+				</a>
 			</td>
 			<td>
+				<a href="#" data-toggle="tooltip" title="Modificar datos persoanles" data-placement="bottom">
 				<form action="../updateUserData/updateUserData.jsp" method="post">
 					<input value="Modify data" type=image src="../../img/settings.png" width="200" height="200">
 				</form>
+				<a href="#" data-toggle="tooltip" title="Ver mensajes" data-placement="bottom">
 			</td>
 		</tr>
 	</table>
