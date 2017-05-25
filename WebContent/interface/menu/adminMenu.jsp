@@ -20,7 +20,7 @@
 					<td>
 						<form action="../management/manageUsers.jsp" method="post">
 							<input value="Administrar usuarios" type=image
-								src="../../img/manageUsers.png" width="200" height="200">
+								src="../../img/manageUsers.png" width="180" height="180">
 						</form>
 					</td>
 					<td>
@@ -40,7 +40,7 @@
 					<td>
 						<form action="../management/showArchives.jsp" method="post">
 							<input value="Ver archivos" type=image
-								src="../../img/showArchives.png" width="200" height="200">
+								src="../../img/showArchives.png" width="180" height="180">
 						</form>
 					</td>
 					<td>

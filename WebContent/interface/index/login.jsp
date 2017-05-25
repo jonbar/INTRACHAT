@@ -20,16 +20,6 @@
 		session_lenght = session.getValueNames().length;
 		User user = userModel.selectUserLogin(received_user, received_password);
 
-		/* if (session_lenght == 0) {
-		
-		if (user == null) {
-			response.sendRedirect("loginForm.jsp?error=datosmal");
-		} else if (user != null) {
-			session.setAttribute("User", user);
-			response.sendRedirect("../menu/userMenu.jsp");
-		}
-		} */
-
 		if (session_lenght == 0) {
 			if (user == null) {
 				response.sendRedirect("loginForm.jsp?error=datosmal");

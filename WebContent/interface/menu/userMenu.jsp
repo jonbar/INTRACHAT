@@ -15,6 +15,16 @@
 <title>Menu</title>
 </head>
 <body>
+<%@ page import="es.eroski.intrachat.models.*"%>
+	<%@ page import="es.eroski.intrachat.classes.*"%>
+	<%@ page import="java.util.*"%>
+	<%@ page import="java.sql.* "%>
+<% User user = (User) session.getAttribute("User");
+if (user.getWorkstation().equals("Director")) {
+	response.sendRedirect("adminMenu.jsp");
+}
+	
+	%>
 	<table>
 		<tr>
 			<td>
