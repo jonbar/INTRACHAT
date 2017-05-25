@@ -16,18 +16,31 @@
 		String received_user = (String) request.getParameter("user");
 		String received_password = (String) request.getParameter("password");
 		int session_lenght = 0;
-		
+
 		session_lenght = session.getValueNames().length;
 		User user = userModel.selectUserLogin(received_user, received_password);
 
-		if (session_lenght == 0) {
-
+		/* if (session_lenght == 0) {
+		
 		if (user == null) {
 			response.sendRedirect("loginForm.jsp?error=datosmal");
 		} else if (user != null) {
 			session.setAttribute("User", user);
 			response.sendRedirect("../menu/userMenu.jsp");
 		}
+		} */
+
+		if (session_lenght == 0) {
+			if (user == null) {
+				response.sendRedirect("loginForm.jsp?error=datosmal");
+			} else {
+				session.setAttribute("User", user);
+				if (user.getWorkstation().equals("Director")) {
+					response.sendRedirect("../menu/adminMenu.jsp");
+				} else {
+					response.sendRedirect("../menu/userMenu.jsp");
+				}
+			}
 		}
 	%>
 

@@ -18,10 +18,10 @@
 			<table align="center">
 				<tr>
 					<td>
-						<!-- <form action="../menu/adminMenu.jsp" method="post">
+						<form action="../management/manageUsers.jsp" method="post">
 							<input value="Administrar usuarios" type=image
-								src="../../img/adminUsers.png" width="200" height="200">
-						</form> -->
+								src="../../img/manageUsers.png" width="200" height="200">
+						</form>
 					</td>
 					<td>
 						<form action="../contacts/showContacts.jsp" method="post">
@@ -38,10 +38,10 @@
 				</tr>
 				<tr>
 					<td>
-						<!-- <form action="../archives/showArchives.jsp" method="post">
+						<form action="../management/showArchives.jsp" method="post">
 							<input value="Ver archivos" type=image
 								src="../../img/showArchives.png" width="200" height="200">
-						</form> -->
+						</form>
 					</td>
 					<td>
 						<form action="../messages/writeMessage.jsp" method="post">
