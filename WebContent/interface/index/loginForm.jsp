@@ -38,13 +38,6 @@
 	<%
 		if (request.getParameter("error") != null) {
 	%>
-			
-		<script>
-			function myFunction() {
-    			alert("Usuario o contraseña incorrectos");
-			}
-			myFunction()
-		</script>
 		<div class="container">
 		<div class="alert alert-danger" style="margin-top: 10px; text-align: center; margin-left: 25%; margin-right: 25%">
 		  <strong>ATENCIÓN!</strong> email o contraseña incorrectos.

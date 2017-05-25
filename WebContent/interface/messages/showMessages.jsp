@@ -9,13 +9,15 @@
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<link rel="stylesheet" href="../../css/showMessages.css" type="text/css" media="all" />
-<link rel="stylesheet" href="../../css/general.css" type="text/css" media="all" />
+<link rel="stylesheet" href="../../css/showMessages.css" type="text/css"
+	media="all" />
+<link rel="stylesheet" href="../../css/general.css" type="text/css"
+	media="all" />
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Mis mensajes</title>
 </head>
 <body>
-<%@ page import="es.eroski.intrachat.models.*"%>
+	<%@ page import="es.eroski.intrachat.models.*"%>
 	<%@ page import="es.eroski.intrachat.classes.*"%>
 	<%@ page import="java.util.*"%>
 	<%@ page import="java.sql.*"%>
@@ -31,10 +33,24 @@
 		ArrayList<Message> sended_messages = messageModel.selectSendedMessagesFromUser(id_user);
 		//
 	%>
-	<form action="../menu/userMenu.jsp" method="post">
-		<img src="../../img/go_back.png" height="15px" width="15px">
-		<input style="border-radius: 5px;" type="submit" name="volver" id="volver" value="Volver" />
-	</form>
+	<table>
+		<tr>
+			<td class="separatedLogout">
+				<form action="../menu/userMenu.jsp" method="post">
+					<img src="../../img/go_back.png" height="15px" width="15px">
+					<input style="border-radius: 5px;" type="submit" name="volver"
+						id="volver" value="Volver" />
+				</form>
+			</td>
+			<td>
+				<form action="../index/logout.jsp" method="post">
+					<img src="../../img/logout.png" height="15px" width="15px"> <input
+						style="border-radius: 5px;" type="submit" name="logout"
+						id="logout" value="logout" />
+				</form>
+			</td>
+		</tr>
+	</table>
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-6">
@@ -82,7 +98,7 @@
 						%>
 
 						<tr>
-							<td><%= message.getReceiver().getEmail() %></td>
+							<td><%=message.getReceiver().getEmail()%></td>
 							<td><%=message.getReceiver().getDepartment().getName()%></td>
 							<td><a
 								href="showMessages.jsp?mes_id=<%=message.getId_message()%>"><%=message.getSubject()%></a></td>
@@ -105,27 +121,24 @@
 							Message message = messageModel.selectMessageFromId(id_message);
 					%>
 					<h4>ASUNTO</h4>
-					<textarea readonly rows="1" 
-						style="overflow: hidden; border-radius: 5px" cols="50"
+					<textarea readonly rows="1" class="editable" cols="50"
 						name="subject" id="subject"><%=message.getSubject()%></textarea>
-					<br>
-					<br>
+					<br> <br>
 					<h4>MENSAJE</h4>
-					<textarea readonly rows=10 cols="50" name="text" id="text" 
-						style="border-radius: 5px"><%=message.getText()%></textarea>
+					<textarea readonly rows=10 cols="50" name="text" id="text"
+						class="editable" ><%=message.getText()%></textarea>
 					<br>
 
 					<%
 						} else {
 					%>
 					<h4>ASUNTO</h4>
-					<textarea readonly rows="1"
-						style="overflow: hidden; border-radius: 5px" cols="50"
+					<textarea readonly rows="1" class="editable" cols="50"
 						name="subject" id="subject"></textarea>
 					<br> <br>
 					<h4>MENSAJE</h4>
-					<textarea readonly rows=10 cols="50" name="text" id="text"
-						style="border-radius: 5px"></textarea>
+					<textarea class="editable" readonly rows=10 cols="50" name="text"
+						id="text"></textarea>
 					<br>
 					<%
 						}

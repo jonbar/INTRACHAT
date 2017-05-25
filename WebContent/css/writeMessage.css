@@ -1,0 +1,15 @@
+@CHARSET "ISO-8859-1";
+
+td.tableMargin {
+	vertical-align: top;
+	width: 150px;
+}
+
+textarea.editable {
+	border-radius: 5px;
+	resize: none;
+}
+
+input.button{
+	border-radius: 5px;
+}

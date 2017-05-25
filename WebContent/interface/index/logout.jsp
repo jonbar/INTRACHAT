@@ -3,4 +3,5 @@
 <% 
 	session.setAttribute("User", null); 
 	session.invalidate();
+	response.sendRedirect("loginForm.jsp");
 %>

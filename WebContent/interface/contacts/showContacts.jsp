@@ -26,10 +26,22 @@
 		ContactModel contactModel = new ContactModel();
 		ArrayList<User> contacts = contactModel.selectContactsFromUser(id_user);
 		%>
-		<form action="../menu/userMenu.jsp" method="post">
-			<img src="../../img/go_back.png" height="15px" width="15px">
-			<input style="border-radius: 5px;" type="submit" name="volver" id="volver" value="Volver" />
-		</form>
+		<table>
+			<tr>
+				<td class="separatedLogout">
+					<form action="../menu/userMenu.jsp" method="post">
+						<img src="../../img/go_back.png" height="15px" width="15px">
+						<input style="border-radius: 5px;" type="submit" name="volver" id="volver" value="Volver" />
+					</form>
+				</td>
+				<td>
+					<form action="../index/logout.jsp" method="post">
+						<img src="../../img/logout.png" height="15px" width="15px">
+						<input style="border-radius: 5px;" type="submit" name="logout" id="logout" value="logout" />
+					</form>
+				</td>
+			</tr>
+		</table>
 		<div class="container">
 		<div class="row">
 		<div class="table-responsive">

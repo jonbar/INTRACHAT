@@ -1,2 +1,6 @@
 @CHARSET "ISO-8859-1";
 
+textarea.editable {
+	border-radius: 5px;
+	resize: none;
+}

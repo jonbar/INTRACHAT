@@ -15,6 +15,16 @@
 <title>Menu</title>
 </head>
 <body>
+	<table>
+		<tr>
+			<td>
+				<form action="../index/logout.jsp" method="post">
+					<img src="../../img/logout.png" height="15px" width="15px">
+					<input style="border-radius: 5px;" type="submit" name="logout" id="logout" value="logout" />
+				</form>
+			</td>
+		</tr>
+	</table>
 	<script>
 	$(document).ready(function(){
 	    $('[data-toggle="tooltip"]').tooltip();   
@@ -22,6 +32,7 @@
 	</script>
 	<div class="container">
 	<div class="row">
+	<div class="center">
 	<table align="center" class="menu">
 		<tr>
 			<td>
@@ -56,6 +67,7 @@
 			</td>
 		</tr>
 	</table>
+	</div>
 	</div>
 	</div>
 </body>

@@ -1,4 +1,9 @@
 @CHARSET "ISO-8859-1";
-body{
+
+body {
 	background-color: #E6E6E6;
+}
+
+td.separatedLogout {
+	width: 100px;
 }

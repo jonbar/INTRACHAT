@@ -10,6 +10,7 @@
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="../../css/general.css" type="text/css" media="all" />
+<link rel="stylesheet" href="../../css/updateUserData.css" type="text/css" media="all" />
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Modificar datos</title>
 </head>
@@ -23,14 +24,26 @@
 		User user = new User();
 		user = (User) session.getAttribute("User");
 	%>
-	<form action="../menu/userMenu.jsp" method="post">
-		<img src="../../img/go_back.png" height="15px" width="15px">
-		<input style="border-radius: 5px;" type="submit" name="volver" id="volver" value="Volver" />
-	</form>
-	<form action="update.jsp" method="post">
 		<table>
+		<tr>
+			<td class="separatedLogout">
+				<form action="../menu/userMenu.jsp" method="post">
+					<img src="../../img/go_back.png" height="15px" width="15px">
+					<input style="border-radius: 5px;" type="submit" name="volver" id="volver" value="Volver" />
+				</form>
+			</td>
+			<td>
+				<form action="../index/logout.jsp" method="post">
+					<img src="../../img/logout.png" height="15px" width="15px">
+					<input style="border-radius: 5px;" type="submit" name="logout" id="logout" value="logout" />
+				</form>
+			</td>
+		</tr>
+	</table>
+	<form action="update.jsp" method="post">
+		<table align="center">
 			<tr>
-				<td colspan="2">Modificar usuario</td>
+				<td colspan="2"><h3 class="title">Modificar usuario:</h3></td>
 			</tr>
 			<tr>
 				<td>ID:</td>
@@ -69,9 +82,13 @@
 					id="department" readonly="readonly"
 					value="<%=user.getDepartment().getName()%>" /></td>
 			</tr>
-		</table>
-		<br> <input type="submit" value="Actualizar" name="update"
+			<tr>
+				<td colspan="2" align="center">
+					<input class="button" type="submit" value="Actualizar" name="update"
 			id="update" />
+				</td>
+			</tr>
+		</table>
 	</form>
 </body>
 </html>
