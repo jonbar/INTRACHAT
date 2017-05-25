@@ -5,12 +5,13 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 
+import javax.annotation.Generated;
+
 import es.eroski.intrachat.classes.Department;
 import es.eroski.intrachat.classes.User;
 import es.eroski.intrachat.models.conector.Conector;
 
 public class UserModel extends Conector {
-
 
 	public ArrayList<User> selectAllUsers() {
 		ArrayList<User> users = new ArrayList<User>();
@@ -53,7 +54,8 @@ public class UserModel extends Conector {
 		try {
 			Statement st = this.conexion.createStatement();
 			ResultSet rs = st.executeQuery(
-					"SELECT users.*, departments.* FROM users JOIN departments ON users.id_department = departments.id_department WHERE users.email='" + email + "' AND users.password='" + password + "'");
+					"SELECT users.*, departments.* FROM users JOIN departments ON users.id_department = departments.id_department WHERE users.email='"
+							+ email + "' AND users.password='" + password + "'");
 			rs.next();
 			User user = new User();
 			user.setId_user(rs.getInt("id_user"));
@@ -111,7 +113,7 @@ public class UserModel extends Conector {
 		}
 		return null;
 	}
-	
+
 	public User selectUserFromEmail(String email) {
 
 		User user = null;
@@ -145,36 +147,33 @@ public class UserModel extends Conector {
 		return user;
 	}
 
-	public void updateUser (int id_user, String password, String name, String last_name){
+	public void updateUser(int id_user, String password, String name, String last_name) {
 		try {
 			Statement st = super.getConexion().createStatement();
-			st.executeUpdate("UPDATE users SET "
-					+ "password = '" + password + "', "
-					+ "name = '" + name + "', "
-					+ "last_name = '" + last_name + "' "
-					+ "WHERE id_user = '" + id_user + "'");
+			st.executeUpdate("UPDATE users SET " + "password = '" + password + "', " + "name = '" + name + "', "
+					+ "last_name = '" + last_name + "' " + "WHERE id_user = '" + id_user + "'");
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
-	
-//	public void insertUser(User user) {
-//		Statement st;
-//		try {
-//			st = super.getConexion().createStatement();
-//			st.execute("INSERT INTO users (password,name,last_name,email,id_department) " + "VALUES ('"
-//					+ user.getPassword() + "','" + user.getName() + "','" + user.getLast_name() + "','"
-//					+ user.getEmail() + "','" + "')");
-//		} catch (SQLException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-//
-//	}
 
+	public void insertUser(User user) {
+		Statement st;
+		try {
+			st = super.getConexion().createStatement();
+			st.execute("INSERT INTO users (password,name,last_name,email,workstation,id_department) " + "VALUES ('"
+					+ user.getPassword() + "','" + user.getName() + "','" + user.getLast_name() + "','"
+					+ user.getEmail() + "','" + user.getWorkstation() + "','" + user.getDepartment().getId_department()
+					+ "')");
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
-	public void deleteUser(int id_user){
+	}
+
+	public void deleteUser(int id_user) {
 		try {
 			Statement st = super.getConexion().createStatement();
 			st.execute("DELETE FROM users " + "WHERE id_user='" + id_user + "'");

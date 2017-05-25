@@ -28,25 +28,17 @@
 		User user = (User) session.getAttribute("User");
 		ArrayList<User> userContacts = contactModel.selectContactsFromUser(user.getId_user());
 	%>
-	<table>
+	<table class="buttons">
 		<tr>
-			<td class="separatedLogout">
-				<form action="../menu/userMenu.jsp" method="post">
-					<img src="../../img/go_back.png" height="15px" width="15px">
-					<input style="border-radius: 5px;" type="submit" name="volver"
-						id="volver" value="Volver" />
-				</form>
-			</td>
-			<td>
-				<form action="../index/logout.jsp" method="post">
-					<img src="../../img/logout.png" height="15px" width="15px"> <input
-						style="border-radius: 5px;" type="submit" name="logout"
-						id="logout" value="logout" />
-				</form>
-			</td>
+			<td><a href="../menu/userMenu.jsp"> <img
+					class="separatedLogout" src="../../img/go_back.png" height="25px"
+					width="25px">
+			</a></td>
+			<td><a href="../index/logout.jsp"> <img
+					src="../../img/logout.png" height="25px" width="25px">
+			</a></td>
 		</tr>
 	</table>
-
 
 	<div class="container">
 		<div class="row">

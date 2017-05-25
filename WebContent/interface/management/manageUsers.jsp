@@ -27,25 +27,19 @@
 		User session_user = new User();
 		session_user = (User) session.getAttribute("User");
 		int id_user = session_user.getId_user();
+		ArrayList<User> all_users = null;
 
-		ArrayList<User> all_users = userModel.selectAllUsers();
+		all_users = userModel.selectAllUsers();
 	%>
-	<table>
+	<table class="buttons">
 		<tr>
-			<td class="separatedLogout">
-				<form action="../menu/userMenu.jsp" method="post">
-					<img src="../../img/go_back.png" height="15px" width="15px">
-					<input style="border-radius: 5px;" type="submit" name="volver"
-						id="volver" value="Volver" />
-				</form>
-			</td>
-			<td>
-				<form action="../index/logout.jsp" method="post">
-					<img src="../../img/logout.png" height="15px" width="15px"> <input
-						style="border-radius: 5px;" type="submit" name="logout"
-						id="logout" value="logout" />
-				</form>
-			</td>
+			<td><a href="../menu/userMenu.jsp"> <img
+					class="separatedLogout" src="../../img/go_back.png" height="25px"
+					width="25px">
+			</a></td>
+			<td><a href="../index/logout.jsp"> <img
+					src="../../img/logout.png" height="25px" width="25px">
+			</a></td>
 		</tr>
 	</table>
 	<div class="container">
@@ -73,7 +67,8 @@
 						<td><%=user.getWorkstation()%></td>
 						<td><%=user.getDepartment().getName()%></td>
 
-						<td><a href="deleteUser.jsp?del_id=<%=user.getId_user()%>"><img
+						<td style="text-align: center;"><a
+							href="deleteUser.jsp?del_id=<%=user.getId_user()%>"><img
 								src="../../img/delete.png" height="20px" width="20px" /></a></td>
 
 					</tr>
@@ -84,7 +79,9 @@
 				</table>
 
 				<!-- Trigger the modal with a button -->
-				Nuevo usuario <button type="button" data-toggle="modal" data-target="#myModal" style="margin-bottom: 20px">Crear</button>
+				<big>Nuevo usuario</big>
+				<button type="button" data-toggle="modal" data-target="#myModal"
+					style="margin-bottom: 20px">Crear</button>
 
 				<!-- Modal -->
 				<div id="myModal" class="modal fade" role="dialog">
@@ -93,51 +90,51 @@
 						<!-- Modal content-->
 						<div class="modal-content">
 							<form action="addUser.jsp" method="post">
-							<div class="modal-header">
-								<button type="button" class="close" data-dismiss="modal">&times;</button>
-								<h4 class="modal-title">Crear nuevo usuario</h4>
-							</div>
-							<div class="modal-body">
-								<table style="margin-left: 25%" >
-									<tr style="margin-bottom: 15px">
-										<td>Nombre:</td>
-										<td><input type="text"></td>
-									</tr>
-									<tr>
-										<td>Apellido:</td>
-										<td><input type="text"></td>
-									</tr>
-									<tr>
-										<td>Contraseña:</td>
-										<td><input type="text"></td>
-									</tr>
-									<tr>
-										<td>Email:</td>
-										<td><input type="text"></td>
-									</tr>
-									<tr>
-										<td>Puesto trabajo:</td>
-										<td><input type="text"></td>
-									</tr>
-									<tr>
-										<td>Departamento:</td>
-										<td>
-											<select style="width: 174px">
-												<option name="Direccion">Direccion</option>
-												<option name="Recursos_humanos">Recursos humanos</option>
-												<option name="Informatica"> Informatica</option>
-												<option name="Manteniemiento">Manteniemiento</option>
-												<option name="Compras">Compras</option>
-												<option name="Ventas">Ventas</option>
-											</select>
-										</td>
-									</tr>
-								</table>
-							</div>
-							<div class="modal-footer">
-								<button type="button" class="btn btn-default"
-									data-dismiss="modal">Crear</button>
-							</div>
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal">&times;</button>
+									<h4 class="modal-title">Crear nuevo usuario</h4>
+								</div>
+								<div class="modal-body">
+									<table style="margin-left: 25%">
+										<tr style="margin-bottom: 15px">
+											<td>Nombre:</td>
+											<td><input type="text" name="name" id="name"></td>
+										</tr>
+										<tr>
+											<td>Apellido:</td>
+											<td><input type="text" name="last_name" id="last_name"></td>
+										</tr>
+										<tr>
+											<td>Contraseña:</td>
+											<td><input type="text" name="password" id="password"></td>
+										</tr>
+										<tr>
+											<td>Email:</td>
+											<td><input type="text" name="email" id="email"></td>
+										</tr>
+										<tr>
+											<td>Puesto trabajo:</td>
+											<td><input type="text" name="workstation"
+												id="workstation"></td>
+										</tr>
+										<tr>
+											<td>Departamento:</td>
+											<td><select style="width: 174px" name="department"
+												id="department">
+													<option value="1">Direccion</option>
+													<option value="2">Recursos humanos</option>
+													<option value="3">Informatica</option>
+													<option value="4">Manteniemiento</option>
+													<option value="5">Compras</option>
+													<option value="6">Ventas</option>
+											</select></td>
+										</tr>
+									</table>
+								</div>
+								<div class="modal-footer">
+									<input type="submit" class="btn btn-default" value="Guardar"
+										name="saveUser" id="saveUser">
+								</div>
 							</form>
 						</div>
 

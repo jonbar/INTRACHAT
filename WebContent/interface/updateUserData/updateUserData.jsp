@@ -9,8 +9,10 @@
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<link rel="stylesheet" href="../../css/general.css" type="text/css" media="all" />
-<link rel="stylesheet" href="../../css/updateUserData.css" type="text/css" media="all" />
+<link rel="stylesheet" href="../../css/general.css" type="text/css"
+	media="all" />
+<link rel="stylesheet" href="../../css/updateUserData.css"
+	type="text/css" media="all" />
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Modificar datos</title>
 </head>
@@ -24,20 +26,15 @@
 		User user = new User();
 		user = (User) session.getAttribute("User");
 	%>
-		<table>
+	<table class="buttons">
 		<tr>
-			<td class="separatedLogout">
-				<form action="../menu/userMenu.jsp" method="post">
-					<img src="../../img/go_back.png" height="15px" width="15px">
-					<input style="border-radius: 5px;" type="submit" name="volver" id="volver" value="Volver" />
-				</form>
-			</td>
-			<td>
-				<form action="../index/logout.jsp" method="post">
-					<img src="../../img/logout.png" height="15px" width="15px">
-					<input style="border-radius: 5px;" type="submit" name="logout" id="logout" value="logout" />
-				</form>
-			</td>
+			<td><a href="../menu/userMenu.jsp"> <img
+					class="separatedLogout" src="../../img/go_back.png" height="25px"
+					width="25px">
+			</a></td>
+			<td><a href="../index/logout.jsp"> <img
+					src="../../img/logout.png" height="25px" width="25px">
+			</a></td>
 		</tr>
 	</table>
 	<form action="update.jsp" method="post">
@@ -53,12 +50,12 @@
 			<tr>
 				<td>Nombre:</td>
 				<td><input type="text" name="name" id="name"
-					 value="<%=user.getName()%>" /></td>
+					value="<%=user.getName()%>" /></td>
 			</tr>
 			<tr>
 				<td>Apellido:</td>
-				<td><input type="text" name="last_name" 
-					id="last_name" value="<%=user.getLast_name()%>" /></td>
+				<td><input type="text" name="last_name" id="last_name"
+					value="<%=user.getLast_name()%>" /></td>
 			</tr>
 			<tr>
 				<td>Contraseña:</td>
@@ -68,7 +65,7 @@
 			<tr>
 				<td>Correo:</td>
 				<td><input type="text" name="email" id="email"
-					 value="<%=user.getEmail()%>" /></td>
+					value="<%=user.getEmail()%>" /></td>
 			</tr>
 			<tr>
 				<td>Puesto:</td>
@@ -83,10 +80,8 @@
 					value="<%=user.getDepartment().getName()%>" /></td>
 			</tr>
 			<tr>
-				<td colspan="2" align="center">
-					<input class="button" type="submit" value="Actualizar" name="update"
-			id="update" />
-				</td>
+				<td colspan="2" align="center"><input class="button"
+					type="submit" value="Actualizar" name="update" id="update" /></td>
 			</tr>
 		</table>
 	</form>
