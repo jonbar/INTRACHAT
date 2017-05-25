@@ -83,67 +83,65 @@
 					%>
 				</table>
 
+				<!-- Trigger the modal with a button -->
+				Nuevo usuario <button type="button" data-toggle="modal" data-target="#myModal" style="margin-bottom: 20px">Crear</button>
 
-				<div class="container">
-					<table>
-						<tr>
-							<td><h4>Nuevo usuario</h4></td>
-							<td style="valign: middle;"><button type="button" data-toggle="modal"
-									data-target="#myModal">Crear</button></td>
-						<tr>
-							</td>
-							<!-- Modal -->
-							<div class="modal fade" id="myModal" role="dialog">
-								<div class="modal-dialog">
+				<!-- Modal -->
+				<div id="myModal" class="modal fade" role="dialog">
+					<div class="modal-dialog">
 
-									<!-- Modal content-->
-							<div class="modal-content">
-								<div class="modal-header">
-									<button type="button" class="close" data-dismiss="modal">&times;</button>
-									<h4 class="modal-title">Agregar nuevo usuario</h4>
-								</div>
-								<div class="modal-body">
-									<table>
-										<tr>
-											<td>Nombre:</td>
-											<td><input type="text"></td>
-										</tr>
-										<tr>
-											<td>Apellido:</td>
-											<td><input type="text"></td>
-										</tr>
-										<tr>
-											<td>Contraseña: </td>
-											<td><input type="text"></td>
-										</tr>
-										<tr>
-											<td>Email: </td>
-											<td><input type="text"> </td>
-										</tr>
-										<tr>
-											<td>Puesto de trabajo: </td>
-											<td><input type="text"></td>
-										</tr>
-										<tr>
-											<td>Departamento: </td>
-											<td><input type="text"></td>
-										</tr>
-									</table>
-								</div>
-
-								</div>
-										<div class="modal-footer">
-											<button type="button" class="btn btn-default"
-												data-dismiss="modal">Cancelar</button>
-											<button type="button" class="btn btn-default"
-												data-dismiss="modal">Guardar</button>
-										</div>
-									</div>
-
-								</div>
+						<!-- Modal content-->
+						<div class="modal-content">
+							<form action="addUser.jsp" method="post">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal">&times;</button>
+								<h4 class="modal-title">Crear nuevo usuario</h4>
 							</div>
-							</tr>
+							<div class="modal-body">
+								<table style="margin-left: 25%" >
+									<tr style="margin-bottom: 15px">
+										<td>Nombre:</td>
+										<td><input type="text"></td>
+									</tr>
+									<tr>
+										<td>Apellido:</td>
+										<td><input type="text"></td>
+									</tr>
+									<tr>
+										<td>Contraseña:</td>
+										<td><input type="text"></td>
+									</tr>
+									<tr>
+										<td>Email:</td>
+										<td><input type="text"></td>
+									</tr>
+									<tr>
+										<td>Puesto trabajo:</td>
+										<td><input type="text"></td>
+									</tr>
+									<tr>
+										<td>Departamento:</td>
+										<td>
+											<select style="width: 174px">
+												<option name="Direccion">Direccion</option>
+												<option name="Recursos_humanos">Recursos humanos</option>
+												<option name="Informatica"> Informatica</option>
+												<option name="Manteniemiento">Manteniemiento</option>
+												<option name="Compras">Compras</option>
+												<option name="Ventas">Ventas</option>
+											</select>
+										</td>
+									</tr>
+								</table>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default"
+									data-dismiss="modal">Crear</button>
+							</div>
+							</form>
+						</div>
 
-							
+					</div>
+				</div>
 </body>
 </html>
