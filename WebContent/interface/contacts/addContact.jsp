@@ -30,13 +30,10 @@
 				response.sendRedirect("showContacts.jsp?error=yaencontactos");
 			}
 		} else {
-
 			response.sendRedirect("showContacts.jsp?error=usernoexiste");
-
 		}
-		
 	%>
-	
-	
+
+
 </body>
 </html>
