@@ -173,4 +173,14 @@ public class UserModel extends Conector {
 //
 //	}
 
+
+	public void deleteUser(int id_user){
+		try {
+			Statement st = super.getConexion().createStatement();
+			st.execute("DELETE FROM users " + "WHERE id_user='" + id_user + "'");
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 }
