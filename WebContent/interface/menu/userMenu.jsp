@@ -34,6 +34,7 @@ if (user.getWorkstation().equals("Director")) {
 		</td>
 	</tr>
 </table>
+	<script>
 	$(document).ready(function(){
 	    $('[data-toggle="tooltip"]').tooltip();   
 	});

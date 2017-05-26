@@ -69,6 +69,26 @@ public class ContactModel extends Conector {
 		return null;
 	}
 	
+	
+	public boolean existUserOnContacts(User userSesion, User userEmail) {
+		int id_user_sesion = userSesion.getId_user();
+		int id_user_email = userEmail.getId_user();
+		try {
+			Statement st = this.conexion.createStatement();
+			ResultSet rs = st.executeQuery("SELECT * from contacts where id_user='" +  id_user_sesion + "' and id_contact='" + id_user_email + "'");
+			while(rs.next()) {
+		
+				return  true;
+			}
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return false;
+	}
+	
+	
 	public void insertContact(int id_user, int id_contact) {
 		Statement st;
 		try {

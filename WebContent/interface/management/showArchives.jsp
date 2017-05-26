@@ -30,8 +30,8 @@
 		</td>
 	</tr>
 </table>
-<h4>PAGINA EN MANTENIMIENTO</h4>
-<p>Lo sentimos, la página está siendo modificada.</p>
+<h2>PAGINA EN MANTENIMIENTO</h2>
+<h5>Lo sentimos, la página está siendo modificada.</h5>
 <img src="../../img/maintenance.png">
 </body>
 </html>
