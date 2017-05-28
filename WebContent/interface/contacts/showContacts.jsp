@@ -44,7 +44,7 @@
 	</table>
 	<div class="container">
 		<div class="row">
-			<div class="table-responsive">
+			<div class="table-responsive" style="overflow:hidden;">
 				<table class="table table-bordered table-striped">
 					<tr align="center">
 						<th>NOMBRE</th>
@@ -71,39 +71,55 @@
 					%>
 				</table>
 				<br>
-				<h4>Agregar contacto:</h4>
-				<form action="addContact.jsp" method="post">
-					<input type="text" name="contact" id="contact" width="1000px" placeholder="Email"/><br>
-					<input type="submit" value="Agregar" name="addContact"
-						id="addContact" style="margin-top: 5px" />
-				</form>
+				<table>
+					<tr>
+						<td>
+							<h4>Agregar contacto:</h4>
+							<form action="addContact.jsp" method="post">
+								<input type="text" name="contact" id="contact" width="1000px"
+									placeholder="Email" /><br> <input type="submit"
+									value="Agregar" name="addContact" id="addContact"
+									style="margin-top: 5px" />
+							</form>
+						</td>
+						<td>
+							<%
+								if (request.getParameter("error") != null) {
+									if (request.getParameter("error").equals("yaencontactos")) {
+							%>
+							<br>
+							<div>
+								<div class="container">
+								<div  class="alert alert-danger" style="text-align: center; margin-right: 15%;">
+									<a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+									<strong>ATENCIÓN!</strong> Usuario ya en tu lista de amigos.
+								</div>
+								</div>
+							</div>
+			
+							<%
+								}
+									if (request.getParameter("error").equals("usernoexiste")) {
+							%>
+							<br>
+							<div>
+								<div class="container">
+								<div  class="alert alert-danger" style="text-align: center; margin-right: 15%;">
+									<a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+									<strong>ATENCIÓN!</strong> Usuario no encontrado
+								</div>
+								</div>
+							</div>
+			
+							<%
+								}
+								}
+							%>
+						</td>
+					</tr>
+				</table>
 			</div>
 		</div>
 	</div>
-
-	<%
-		if (request.getParameter("error") != null) {
-			if (request.getParameter("error").equals("yaencontactos")) {
-	%>
-	<br>
-	<div>
-		<p style="background-color: #ff9999; display: inline">Usuario ya
-			en tu lista de contactos.</p>
-	</div>
-
-	<%
-		}
-			if (request.getParameter("error").equals("usernoexiste")) {
-	%>
-	<br>
-	<div>
-		<p style="background-color: #ff9999; display: inline">Usuario no
-			encontrado.</p>
-	</div>
-
-	<%
-		}
-		}
-	%>
 </body>
 </html>

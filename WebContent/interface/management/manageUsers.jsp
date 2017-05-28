@@ -13,6 +13,8 @@
 	media="all" />
 <link rel="stylesheet" href="../../css/general.css" type="text/css"
 	media="all" />
+<link rel="stylesheet" href="../../css/manageUsers.css" type="text/css"
+	media="all" />
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Mis contactos</title>
 </head>
@@ -96,29 +98,29 @@
 								</div>
 								<div class="modal-body">
 									<table style="margin-left: 25%">
-										<tr style="margin-bottom: 15px">
-											<td>Nombre:</td>
+										<tr>
+											<td class="usersAddFrom">Nombre:</td>
 											<td><input type="text" name="name" id="name"></td>
 										</tr>
 										<tr>
-											<td>Apellido:</td>
+											<td class="usersAddFrom">Apellido:</td>
 											<td><input type="text" name="last_name" id="last_name"></td>
 										</tr>
 										<tr>
-											<td>Contraseña:</td>
+											<td class="usersAddFrom">Contraseña:</td>
 											<td><input type="text" name="password" id="password"></td>
 										</tr>
 										<tr>
-											<td>Email:</td>
+											<td class="usersAddFrom">Email:</td>
 											<td><input type="text" name="email" id="email"></td>
 										</tr>
 										<tr>
-											<td>Puesto trabajo:</td>
+											<td class="usersAddFrom">Puesto trabajo:</td>
 											<td><input type="text" name="workstation"
 												id="workstation"></td>
 										</tr>
 										<tr>
-											<td>Departamento:</td>
+											<td class="usersAddFrom">Departamento:</td>
 											<td><select style="width: 174px" name="department"
 												id="department">
 													<option value="1">Direccion</option>

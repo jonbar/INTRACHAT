@@ -43,38 +43,38 @@
 				<td colspan="2"><h3 class="title">Modificar usuario:</h3></td>
 			</tr>
 			<tr>
-				<td>ID:</td>
+				<td class="userUpdateFrom">ID:</td>
 				<td><input type="text" name="id" id="id" readonly="readonly"
 					value="<%=user.getId_user()%>" /></td>
 			</tr>
 			<tr>
-				<td>Nombre:</td>
+				<td class="userUpdateFrom">Nombre:</td>
 				<td><input type="text" name="name" id="name"
 					value="<%=user.getName()%>" /></td>
 			</tr>
 			<tr>
-				<td>Apellido:</td>
+				<td class="userUpdateFrom">Apellido:</td>
 				<td><input type="text" name="last_name" id="last_name"
 					value="<%=user.getLast_name()%>" /></td>
 			</tr>
 			<tr>
-				<td>Contraseña:</td>
+				<td class="userUpdateFrom">Contraseña:</td>
 				<td><input type="text" name="password" id="password"
 					value="<%=user.getPassword()%>" /></td>
 			</tr>
 			<tr>
-				<td>Correo:</td>
+				<td class="userUpdateFrom">Correo:</td>
 				<td><input type="text" name="email" id="email"
 					value="<%=user.getEmail()%>" /></td>
 			</tr>
 			<tr>
-				<td>Puesto:</td>
+				<td class="userUpdateFrom">Puesto:</td>
 				<td><input type="text" name="workstation" readonly="readonly"
 					id="workstation" readonly="readonly"
 					value="<%=user.getWorkstation()%>" /></td>
 			</tr>
 			<tr>
-				<td>Departamento:</td>
+				<td class="userUpdateFrom">Departamento:</td>
 				<td><input type="text" name="department" readonly="readonly"
 					id="department" readonly="readonly"
 					value="<%=user.getDepartment().getName()%>" /></td>
