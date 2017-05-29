@@ -13,6 +13,7 @@
 </head>
 <body>
 	<% session.invalidate(); %>
+	<a href="loginForm2.jsp">Modo nocturno</a>
 	<form action="login.jsp" method="post">
 		<table align="center" class="tableLogin">
 			<tr>
