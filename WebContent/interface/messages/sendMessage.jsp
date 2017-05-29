@@ -39,7 +39,6 @@
 		
 		messageModel.insert(message);		
 	%>
-	<h1>Mensaje enviado correctamente</h1>
-	<a href="writeMessage.jsp">Volver</a>
+	<% response.sendRedirect("writeMessages.jsp"); %>
 </body>
 </html>
