@@ -4,6 +4,13 @@ body {
 	background-color: #E6E6E6;
 }
 
-td.separatedLogout {
-	width: 100px;
+table.buttons{
+	vertical-align: middle;
+	margin-bottom: 15px;
+	margin-top: 15px;
+	margin-left: 10px;
+}
+
+img.separatedLogout {
+	margin-right: 15px;
 }

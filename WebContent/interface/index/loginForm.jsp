@@ -39,9 +39,10 @@
 		if (request.getParameter("error") != null) {
 	%>
 		<div class="container">
-		<div class="alert alert-danger" style="margin-top: 10px; text-align: center; margin-left: 25%; margin-right: 25%">
-		  <strong>ATENCIÓN!</strong> email o contraseña incorrectos.
-		</div>
+			<div class="alert alert-danger" style="margin-top: 10px; text-align: center; margin-left: 25%; margin-right: 25%">
+				<a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+				<strong>ATENCIÓN!</strong> email o contraseña incorrectos.
+			</div>
 		</div>
 	<%
 		}

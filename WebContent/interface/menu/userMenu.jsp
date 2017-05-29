@@ -15,16 +15,25 @@
 <title>Menu</title>
 </head>
 <body>
-	<table>
-		<tr>
-			<td>
-				<form action="../index/logout.jsp" method="post">
-					<img src="../../img/logout.png" height="15px" width="15px">
-					<input style="border-radius: 5px;" type="submit" name="logout" id="logout" value="logout" />
-				</form>
-			</td>
-		</tr>
-	</table>
+<%@ page import="es.eroski.intrachat.models.*"%>
+	<%@ page import="es.eroski.intrachat.classes.*"%>
+	<%@ page import="java.util.*"%>
+	<%@ page import="java.sql.* "%>
+<% User user = (User) session.getAttribute("User");
+if (user.getWorkstation().equals("Director")) {
+	response.sendRedirect("adminMenu.jsp");
+}
+	
+	%>
+	<table class="buttons">
+	<tr>
+		<td>
+			<a href="../index/logout.jsp">
+				<img src="../../img/logout.png" height="25px" width="25px">
+			</a>
+		</td>
+	</tr>
+</table>
 	<script>
 	$(document).ready(function(){
 	    $('[data-toggle="tooltip"]').tooltip();   

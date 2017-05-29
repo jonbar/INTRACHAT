@@ -23,10 +23,11 @@
 		ArrayList<User> contacts = contactModel.selectContactsFromUser(userSesion.getId_user());
 
 		if (userEmail != null) {
-			if (!contacts.contains(userEmail)) {
+			if (!contactModel.existUserOnContacts(userSesion, userEmail)) {
 				contactModel.insertContact(userSesion.getId_user(), userEmail.getId_user());
 				response.sendRedirect("showContacts.jsp");
 			} else {
+				//existitzen da bere kontaktuetan
 				response.sendRedirect("showContacts.jsp?error=yaencontactos");
 			}
 		} else {
