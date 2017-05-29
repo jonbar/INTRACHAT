@@ -39,6 +39,6 @@
 		
 		messageModel.insert(message);		
 	%>
-	<% response.sendRedirect("writeMessages.jsp"); %>
+	<% response.sendRedirect("writeMessage.jsp"); %>
 </body>
 </html>
