@@ -13,7 +13,7 @@
 </head>
 <body style="background-color: gray">
 	<% session.invalidate(); %>
-	<a href="loginForm.jsp">Modo normal</a>
+	<a href="loginForm.jsp">Modo diurno</a>
 	
 	<form action="login.jsp" method="post">
 		<table align="center" class="tableLogin">
