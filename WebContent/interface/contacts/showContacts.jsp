@@ -92,7 +92,7 @@
 								<div class="container">
 								<div  class="alert alert-danger" style="text-align: center; margin-right: 15%;">
 									<a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
-									<strong>ATENCIÓN!</strong> Usuario ya en tu lista de amigos.
+									<strong>ATENCIÓN!</strong> Usuario ya en tu lista de contactos.
 								</div>
 								</div>
 							</div>
@@ -106,7 +106,7 @@
 								<div class="container">
 								<div  class="alert alert-danger" style="text-align: center; margin-right: 15%;">
 									<a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
-									<strong>ATENCIÓN!</strong> Usuario no encontrado
+									<strong>ATENCIÓN!</strong> Usuario no encontrado.
 								</div>
 								</div>
 							</div>
